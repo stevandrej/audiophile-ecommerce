@@ -4,7 +4,7 @@ import './CategoriesList.scss';
 
 const CategoriesList = ({ categories, ...props }) => {
 	return <ul className='categories'>
-		{categories.map(category => <li key={category.name}>
+		{categories.map((category, index) => <li key={`${category.name}-${index}`}>
 			<CategoryItem
 				categoryImage={category.categoryImage}
 				categoryName={category.categoryName}

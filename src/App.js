@@ -2,7 +2,6 @@ import "./App.css";
 import { useDispatch } from "react-redux";
 import * as actions from "./redux/actions/products";
 import { useEffect } from "react";
-import ComponentsOverview from  './ComponentsOverview';
 import NavBar from "./navigation/NavBar/NavBar";
 import Footer from "./navigation/Footer/Footer";
 import Home from "./pages/Home/Home";
