@@ -1,0 +1,13 @@
+.categories{
+	display: flex;
+	margin: auto;
+
+	li{
+		display: flex;
+		flex: 1;
+
+		&:not(:last-child){
+			margin-right: 30px;
+		}
+	}
+}

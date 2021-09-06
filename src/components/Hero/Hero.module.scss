@@ -1,0 +1,40 @@
+@import '../../assets//scss/variables';
+
+.hero{
+	display: flex;
+	height: 600px;
+	background-color: #191919;
+	color: $white;
+
+	&__bgimage{
+		display: flex;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		align-items: flex-start;
+		justify-content: center;
+	}
+}
+
+.tag_new_product{
+	margin-bottom: 50px;
+	color: $grey-200;
+}
+
+.product_content{
+	margin-bottom: 50px;
+
+	.product_content__title{
+		margin-bottom: 20px;
+	}
+
+	.product_content__text{
+		color: $grey-200;
+	}
+}

@@ -1,0 +1,11 @@
+.menu {
+	& li {
+		display: inline-block;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+	}
+}

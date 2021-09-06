@@ -1,0 +1,57 @@
+@import '../../assets/scss/variables';
+
+footer{
+	background-color: $secondary;
+	color: $white;
+}
+
+.footerContainer{
+	position: relative;
+	
+	&::before{
+		content: '';
+		position: absolute;
+		height: 5px;
+		width: 100px;
+		background-color: $primary;
+		top: 0;
+		left: 0;
+	}
+}
+
+.footerNavbar{
+	padding-top: 75px;
+	margin-bottom: 36px;
+}
+
+.footerLogo{
+	justify-content: flex-start;
+}
+
+.footerNavMenu{
+	justify-content: flex-end;
+	font-size: 1.3rem;
+}
+
+.content{
+	opacity: .5;
+}
+
+.socialmedia{
+	justify-content: flex-end;
+	margin-top: auto;
+}
+
+.socialmediaIcons{
+	display: flex;
+
+	& :not(:last-child){
+		margin-right: 16px;
+	}
+}
+
+.copyright{
+	margin-top: 56px;
+	margin-bottom: 48px;
+	opacity: .5;
+}

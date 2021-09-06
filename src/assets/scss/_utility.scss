@@ -1,0 +1,17 @@
+.wrapper{
+	width: 1110px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+}
+
+.col-6 {
+	display: flex;
+	flex-basis: 50%;
+}
+
+.col-gap > *:not(:last-child) {
+	margin-right: 3rem;
+}
