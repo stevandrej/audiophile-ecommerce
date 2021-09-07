@@ -1,11 +1,12 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
 import CategoriesList from "../../components/ProductCategories/CategoriesList/CategoriesList";
-import './Home.scss';
+import "./Home.scss";
 import headphonesImage from "../../assets/images/shared/desktop/image-headphones.png";
 import speakersImage from "../../assets/images/shared/desktop/image-speakers.png";
 import earphones from "../../assets/images/shared/desktop/image-earphones.png";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
+import BestGear from "../../components/BestGear/BestGear";
 
 const Home = () => {
     return (
@@ -34,8 +35,9 @@ const Home = () => {
                     />
                 </section>
                 <main>
-                    <FeaturedProducts/>
+                    <FeaturedProducts />
                 </main>
+                <BestGear />
             </div>
         </>
     );
