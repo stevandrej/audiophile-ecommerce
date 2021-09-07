@@ -6,6 +6,7 @@ import NavBar from "./navigation/NavBar/NavBar";
 import Footer from "./navigation/Footer/Footer";
 import Home from "./pages/Home/Home";
 import { Route, Switch } from "react-router-dom";
+import Category from "./pages/Category/Category";
 
 function App() {
     const dispatch = useDispatch();
@@ -21,6 +22,9 @@ function App() {
 					<Route exact path="/">
 						<Home/>
 					</Route>
+                    <Route path='/category'>
+                        <Category />
+                    </Route>
 				</Switch>
 			<Footer/>
         </div>

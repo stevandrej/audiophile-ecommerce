@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.category-name{
+	height: 240px;
+	background-color: $secondary;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h2{
+		font-weight: 400;
+	}
+}

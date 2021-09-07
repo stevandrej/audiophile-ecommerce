@@ -1,18 +1,22 @@
 import React from "react";
-import Hero from "../../components/Hero/Hero";
 import CategoriesList from "../../components/ProductCategories/CategoriesList/CategoriesList";
-import "./Home.scss";
+import "./Category.scss";
 import headphonesImage from "../../assets/images/shared/desktop/image-headphones.png";
 import speakersImage from "../../assets/images/shared/desktop/image-speakers.png";
 import earphones from "../../assets/images/shared/desktop/image-earphones.png";
-import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import BestGear from "../../components/BestGear/BestGear";
 
-const Home = () => {
+const Category = () => {
     return (
         <>
-            <Hero />
+            <div className="category-name">
+                <h2>HEADPHONES</h2>
+            </div>
+
             <div className="wrapper">
+
+				
+
                 <CategoriesList
                     categories={[
                         {
@@ -32,13 +36,10 @@ const Home = () => {
                         },
                     ]}
                 />
-                <main>
-                    <FeaturedProducts />
-                </main>
                 <BestGear />
             </div>
         </>
     );
 };
 
-export default Home;
+export default Category;
