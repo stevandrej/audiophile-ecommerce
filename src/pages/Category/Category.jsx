@@ -15,7 +15,6 @@ const Category = () => {
 
             <div className="wrapper">
 
-				
 
                 <CategoriesList
                     categories={[
