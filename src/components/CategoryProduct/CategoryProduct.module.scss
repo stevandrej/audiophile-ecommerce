@@ -1,5 +1,12 @@
 .product-container{
 	display: flex;
+	max-height: 575px;
+	margin-top: 160px;
+	margin-bottom: 160px;
+}
+
+.reverse-direction{
+	flex-direction: row-reverse;
 }
 
 .product-image{
@@ -8,6 +15,7 @@
 
 	img{
 		border-radius: 8px;
+		max-height: 100%;
 	}
 }
 
