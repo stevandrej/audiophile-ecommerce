@@ -5,6 +5,7 @@ import headphonesImage from "../../assets/images/shared/desktop/image-headphones
 import speakersImage from "../../assets/images/shared/desktop/image-speakers.png";
 import earphones from "../../assets/images/shared/desktop/image-earphones.png";
 import BestGear from "../../components/BestGear/BestGear";
+import CategoryProduct from "../../components/CategoryProduct/CategoryProduct";
 
 const Category = () => {
     return (
@@ -15,6 +16,7 @@ const Category = () => {
 
             <div className="wrapper">
 
+                <CategoryProduct />
 
                 <CategoriesList
                     categories={[

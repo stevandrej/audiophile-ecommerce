@@ -1,0 +1,34 @@
+.product-container{
+	display: flex;
+}
+
+.product-image{
+	flex: 1;
+	flex-basis: 50%;
+
+	img{
+		border-radius: 8px;
+	}
+}
+
+.product-info{
+	display: flex;
+	flex: 1;
+	flex-basis: 50%;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+}
+
+.badge{
+	margin-bottom: 16px;
+}
+
+.title{
+	margin-bottom: 21px;
+}
+
+.button{
+	display: flex;
+	margin-top: 40px;
+}
