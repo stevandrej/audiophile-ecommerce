@@ -1,0 +1,31 @@
+.heading{
+	text-align: center;
+	margin-bottom: 3.6rem;
+	font-weight: 600;
+}
+
+.productsList{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.product{
+	display: flex;
+	flex-direction: column;
+}
+
+.productImage{
+	border-radius: 8px;
+	margin-bottom: 40px;
+}
+
+.productTitle{
+	margin-bottom: 36px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.button{
+	margin: auto;
+}

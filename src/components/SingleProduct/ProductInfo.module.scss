@@ -1,0 +1,79 @@
+@import '../../assets/scss/variables';
+
+.product{
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+.btnBack{
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: $secondary;
+	
+	&:hover{
+		color: $primary;
+	}
+}
+
+.product-container{
+	display: flex;
+	max-height: 575px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.product-image{
+	flex: 1;
+	flex-basis: 50%;
+
+	img{
+		border-radius: 8px;
+		max-height: 100%;
+	}
+}
+
+.product-info{
+	display: flex;
+	flex: 1;
+	flex-basis: 50%;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 100px;
+}
+
+.badge{
+	margin-bottom: 16px;
+}
+
+.title{
+	margin-bottom: 21px;
+}
+
+.button{
+	display: flex;
+	margin-top: 40px;
+	gap: 16px;
+}
+
+.price{
+	margin-top: 32px;
+	font-size: 1.8rem;
+}
+
+.features{
+	display: flex;
+	flex-direction: column;
+}
+
+.inTheBox{
+	display: flex;
+	flex-direction: column;
+	padding-left: 100px;
+}
+
+.boxList{
+	padding-right: 20px;
+	text-transform: unset !important;
+}

@@ -1,0 +1,28 @@
+@import "../../assets/scss/variables";
+
+.navSection {
+	background-color: $secondary;
+}
+
+.navBar {
+	display: flex;
+	align-items: center;
+	padding: 32px 0;
+}
+
+.logo {
+	margin-right: auto;
+	cursor: pointer;
+}
+
+.navigation {
+	color: $white;
+	margin: auto;
+	list-style: none;
+	font-size: 1.3rem;
+}
+
+.cart {
+	margin-left: auto;
+	cursor: pointer;
+}

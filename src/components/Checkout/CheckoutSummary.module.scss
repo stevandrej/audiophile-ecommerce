@@ -1,0 +1,24 @@
+@import '../../assets/scss/variables';
+
+.summaryForm{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.rowPayInfo{
+	display: flex;
+	justify-content: space-between;
+}
+
+.info{
+	color: $secondary;
+}
+
+.price{
+	color: $secondary;
+}
+
+.totalPrice{
+	color: $primary;
+}

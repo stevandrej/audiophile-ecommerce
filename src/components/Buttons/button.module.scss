@@ -1,0 +1,53 @@
+@import "../../assets/scss/variables";
+
+.btn {
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.primary {
+	color: $white;
+	background-color: $primary;
+	border: none;
+	padding: 15px 34px;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: $primary-light;
+	}
+}
+
+.secondary {
+	color: $secondary;
+	box-shadow: 0px 0px 0px 1px $secondary-dark inset;
+	border: none;
+	padding: 15px 34px;
+	background-color: $white;
+	transition: background-color 0.2s, color 0.2s;
+
+	&:hover {
+		color: $white;
+		background-color: $secondary-dark;
+	}
+}
+
+.tertiary {
+	background-color: transparent;
+	color: $secondary-dark;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $primary;
+	}
+}
+.arrow {
+	margin-left: 15px;
+}

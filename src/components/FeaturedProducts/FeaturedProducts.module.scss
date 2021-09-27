@@ -1,0 +1,114 @@
+@import '../../assets/scss/variables';
+
+.featured-big{
+	background-color: $primary;
+	display: flex;
+	margin-bottom: 48px;
+	border-radius: 8px;
+
+	&__image{
+		display: flex;
+		width: 50%;
+		padding-top: 100px;
+		justify-content: center;
+		align-content: flex-end;
+		position: relative;
+		overflow: hidden;
+
+		img{
+			width: 60%;
+			object-fit: contain;
+			z-index: 100;
+		}
+	}
+
+	&__content{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title{
+		color: $white;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+
+	&__description{
+		color: $grey-200;
+	}
+}
+
+.btn{
+	margin-top: 40px;
+}
+
+@mixin circles ($width, $Height){
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	width: $width;
+	height: $Height;
+	transform: translate(-50%, -50%);
+	border: 1px solid $grey-200;
+	opacity: .5;
+	z-index: 10;
+}
+
+.circles{
+	@include circles(450px, 450px);
+}
+
+.circles::before{
+	content: "";
+	@include circles(550px, 550px);
+}
+
+.circles::after{
+	content: "";
+	@include circles(400px, 400px)
+}
+
+
+.featured-secondary{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 320px;
+	border-radius: 8px;
+}
+
+.featured-tertiary{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-top: 48px;
+
+	&__img{
+		display: flex;
+		flex: 1;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		padding-left: 95px;
+		justify-content: center;
+		background-color: $grey-200;
+		border-radius: 8px;
+	}
+	
+	&__title{
+		font-weight: 400;
+	}
+
+}

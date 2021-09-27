@@ -1,0 +1,18 @@
+.section_categories{
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+.categories{
+	display: flex;
+	margin: auto;
+
+	li{
+		display: flex;
+		flex: 1;
+
+		&:not(:last-child){
+			margin-right: 30px;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import '../../assets/scss/variables';
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	padding-right: 125px;
+
+	&__title{
+		margin-bottom: 20px;
+		font-weight: 400;
+
+		span{
+			color: $primary;
+		}
+	}
+}
+
+.image-container{
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+
+	img{
+		border-radius: 8px;
+	}
+}

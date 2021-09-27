@@ -1,0 +1,27 @@
+@import "../../../assets/scss/variables";
+
+.input-text{
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+	flex: 1;
+
+	label{
+		font-size: 1.2rem;
+		color: $secondary-dark;
+	}
+
+	input{
+		font-size: 1.6rem;
+		padding: 10px;
+		outline: none;
+		border: 2px solid #ccc;
+		border-radius: 6px;
+		transition: .2s border;
+
+		&:focus{
+			border-color: $primary;
+			caret-color: $primary;	
+		}
+	}
+}

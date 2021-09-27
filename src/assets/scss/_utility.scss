@@ -1,0 +1,22 @@
+.wrapper{
+	width: 1110px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex: 1;
+}
+
+.col-6 {
+	display: flex;
+	flex-basis: 50%;
+}
+
+.col-gap > *:not(:last-child) {
+	margin-right: 3rem;
+}
+
+.dir-col{
+	flex-direction: column;
+}

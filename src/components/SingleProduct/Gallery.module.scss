@@ -1,0 +1,23 @@
+.gallery {
+    display: grid;
+    grid-template-areas:
+        "small-1 large"
+        "small-2 large";
+    gap: 30px;
+
+	img{
+		border-radius: 8px;
+	}
+}
+
+#img1 {
+    grid-area: small-1;
+}
+
+#img2{
+	grid-area: small-2;
+}
+
+#img3{
+	grid-area: large;
+}
