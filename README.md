@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/stevandrej/audiophile-ecommerce](https://github.com/stevandrej/audiophile-ecommerce)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://audiophile-ecommerce-rosy.vercel.app/](https://audiophile-ecommerce-rosy.vercel.app/)
 
 ## My process
 
