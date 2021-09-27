@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/stevandrej/audiophile-ecommerce)
+- Solution URL: [https://github.com/stevandrej/audiophile-ecommerce](https://github.com/stevandrej/audiophile-ecommerce)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -54,5 +54,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Andrej Stevkovski](https://github.com/stevandrej)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/stevandrej)
+- Github - [Andrej Stevkovski](https://github.com/stevandrej)
+- Frontend Mentor - [@stevandrej](https://www.frontendmentor.io/profile/stevandrej)
