@@ -6,9 +6,11 @@
 	cursor: pointer;
 	border: none;
 	display: flex;
+	flex: 1;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
+	width: fit-content;
 }
 
 .primary {

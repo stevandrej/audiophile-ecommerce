@@ -1,0 +1,26 @@
+.componentBackground{
+	background-color: #f5f5f5;
+}
+
+.contentWrapper{
+	margin-top: 140px !important;
+	margin-bottom: 140px !important;
+}
+
+.form{
+	display: flex;
+	flex-basis: 65%;
+	margin-right: 30px;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 50px;
+}
+
+.summary{
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 50px;
+	display: flex;
+	flex-basis: 35%;
+	align-self: flex-start;
+}

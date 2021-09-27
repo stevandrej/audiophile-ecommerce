@@ -10,7 +10,7 @@ const NavBar = () => {
 
 	return <div className={styles.navSection}>
 		<div className={`wrapper ${styles.navBar}`}>
-			<a href="#" className={styles.logo}><img src={logo} alt='Logo' /></a>
+			<a href="/" className={styles.logo}><img src={logo} alt='Logo' /></a>
 			<nav className={styles.navigation}>
 				<Menu />
 			</nav>

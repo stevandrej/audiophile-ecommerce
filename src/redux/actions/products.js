@@ -24,7 +24,7 @@ export const startGetProducts = (url) => {
 	return async (dispatch) => {
 		dispatch(getProductsStart());
 
-		fetch(url)
+		await fetch(url)
 			.then(response => response.json())
 			.then(data => {
 				dispatch(getProductsSuccess(data));

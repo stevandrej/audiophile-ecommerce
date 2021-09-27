@@ -28,6 +28,11 @@
 	padding-left: 100px;
 }
 
+.reverse-direction .product-info{
+	padding-left: unset;
+	padding-right: 100px;
+}
+
 .badge{
 	margin-bottom: 16px;
 }
@@ -37,6 +42,5 @@
 }
 
 .button{
-	display: flex;
 	margin-top: 40px;
 }

@@ -1,40 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
 import CategoriesList from "../../components/ProductCategories/CategoriesList/CategoriesList";
 import "./Home.scss";
-import headphonesImage from "../../assets/images/shared/desktop/image-headphones.png";
-import speakersImage from "../../assets/images/shared/desktop/image-speakers.png";
-import earphones from "../../assets/images/shared/desktop/image-earphones.png";
+import * as actions from "../../redux/actions/products";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import BestGear from "../../components/BestGear/BestGear";
+import { useDispatch, useSelector } from "react-redux";
 
 const Home = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(actions.startGetProducts("/data.json"));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const loading = useSelector((state) => state.productsReducer.loading);
+
     return (
         <>
             <Hero />
             <div className="wrapper">
-                <CategoriesList
-                    categories={[
-                        {
-                            categoryImage: headphonesImage,
-                            categoryName: "Headphones",
-                            link: "#",
-                        },
-                        {
-                            categoryImage: speakersImage,
-                            categoryName: "Speakers",
-                            link: "#",
-                        },
-                        {
-                            categoryImage: earphones,
-                            categoryName: "Earphones",
-                            link: "#",
-                        },
-                    ]}
-                />
-                <main>
-                    <FeaturedProducts />
-                </main>
+                {loading ? (
+                    "loading..."
+                ) : (
+                    <>
+                        <CategoriesList />
+                        <main>
+                            <FeaturedProducts/>
+                        </main>
+                    </>
+                )}
                 <BestGear />
             </div>
         </>

@@ -5,10 +5,6 @@ import { Provider } from 'react-redux'
 import store from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import './assets/scss/main.scss';
-/* import './assets/scss/_reset.scss';
-import './assets/scss/_theme.scss';
-import './assets/scss/_utility.scss';
-import './assets/scss/_variables.scss'; */
 
 ReactDOM.render(
 	<React.StrictMode>

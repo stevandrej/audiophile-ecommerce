@@ -1,29 +1,45 @@
 import React from "react";
+import { useHistory } from "react-router";
 import Button from "../Buttons/Button";
-import mark2Image from "../../assets/images/category-headphones/desktop/image-xx99-mark-two.jpg";
 import styles from "./CategoryProduct.module.scss";
 
-const CategoryProduct = ({ newProduct = false, reverseDirection = false }) => {
+const CategoryProduct = ({
+    newProduct = false,
+    reverseDirection = false,
+    ...props
+}) => {
+    let history = useHistory();
+
+    const handleBtnClick = () => {
+        history.push(`/product/${props.product.slug}`);
+    };
+
     return (
-        <div className={`${styles["product-container"]} ${reverseDirection && styles['reverse-direction']}`}>
+        <div
+            className={`${styles["product-container"]} ${
+                reverseDirection && styles["reverse-direction"]
+            }`}
+        >
             <div className={styles["product-image"]}>
-                <img src={mark2Image} alt="mark 2" />
+                <img
+                    src={
+                        window.location.origin +
+                        `/` +
+                        props.product.image.desktop
+                    }
+                    alt={props.product.name}
+                />
             </div>
             <div className={styles["product-info"]}>
-                {newProduct && (
+                {props.product.new && (
                     <span className={`${styles.badge} overline`}>
                         NEW PRODUCT
                     </span>
                 )}
-                <h2 className={styles.title}>XX99 MARK II HEADPHONES</h2>
-                <p>
-                    The new XX99 Mark II headphones is the pinnacle of pristine
-                    audio. It redefines your premium headphone experience by
-                    reproducing the balanced depth and precision of
-                    studio-quality sound.
-                </p>
+                <h2 className={styles.title}>{props.product.name}</h2>
+                <p>{props.product.description}</p>
                 <div className={styles.button}>
-                    <Button>SEE PRODUCT</Button>
+                    <Button click={handleBtnClick}>SEE PRODUCT</Button>
                 </div>
             </div>
         </div>

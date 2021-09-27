@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Buttons/Button";
+import LinkButton from "../Buttons/LinkButton";
 import styles from "./Hero.module.scss";
 import backgroundImage from "../../assets/images/home/desktop/image-hero.jpg";
 
@@ -21,7 +21,7 @@ const Hero = () => {
                         </p>
                     </div>
                     <div>
-                        <Button>SEE PRODUCT</Button>
+                        <LinkButton href="/product/xx99-mark-two-headphones">SEE PRODUCT</LinkButton>
                     </div>
                 </div>
                 <div></div>

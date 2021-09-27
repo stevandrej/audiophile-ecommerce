@@ -1,42 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CategoriesList from "../../components/ProductCategories/CategoriesList/CategoriesList";
 import "./Category.scss";
-import headphonesImage from "../../assets/images/shared/desktop/image-headphones.png";
-import speakersImage from "../../assets/images/shared/desktop/image-speakers.png";
-import earphones from "../../assets/images/shared/desktop/image-earphones.png";
 import BestGear from "../../components/BestGear/BestGear";
 import CategoryProduct from "../../components/CategoryProduct/CategoryProduct";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../../redux/actions/products";
 
 const Category = () => {
+    const { categoryName } = useParams();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(actions.startGetProducts("/data.json"));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const products = useSelector((state) =>
+        state.productsReducer.products.filter(
+            (item) => item.category === categoryName
+        )
+    );
+
     return (
         <>
             <div className="category-name">
-                <h2>HEADPHONES</h2>
+                <h2>{categoryName}</h2>
             </div>
 
             <div className="wrapper">
+                {products.map((item, index) => (
+                    <CategoryProduct
+                        product={item}
+                        reverseDirection={index % 2 === 0 ? false : true}
+                        key={item.id}
+                    />
+                ))}
 
-                <CategoryProduct />
-
-                <CategoriesList
-                    categories={[
-                        {
-                            categoryImage: headphonesImage,
-                            categoryName: "Headphones",
-                            link: "#",
-                        },
-                        {
-                            categoryImage: speakersImage,
-                            categoryName: "Speakers",
-                            link: "#",
-                        },
-                        {
-                            categoryImage: earphones,
-                            categoryName: "Earphones",
-                            link: "#",
-                        },
-                    ]}
-                />
+                <CategoriesList />
                 <BestGear />
             </div>
         </>
