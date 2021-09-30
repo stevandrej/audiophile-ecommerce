@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import styles from './InputNumber.module.scss';
+import React from "react";
+import styles from "./InputNumber.module.scss";
 
-const InputNumber = ({value}) => {
+const InputNumber = ({ value = 1, onChange }) => {
 
-	const [inputValue, setInputValue] = useState(value ? value : 1);
-
-	return(
-		<input type='number' className={styles.inputNumber} min='1' value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
-	)
-}
+    return (
+        <input
+            type="number"
+            className={styles.inputNumber}
+            min="1"
+            value={value}
+            onChange={(e) => onChange(parseInt(e.target.value))}
+        />
+    );
+};
 
 export default InputNumber;

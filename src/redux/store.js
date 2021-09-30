@@ -3,7 +3,7 @@ import rootReducer from "./reducers/rootReducer";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const composeEnhancers = composeWithDevTools({})
+const composeEnhancers = composeWithDevTools({/* trace: true */})
 
 const store = createStore(
     rootReducer,
