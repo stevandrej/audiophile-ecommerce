@@ -24,7 +24,6 @@ const Hero = () => {
                         <LinkButton href="/product/xx99-mark-two-headphones">SEE PRODUCT</LinkButton>
                     </div>
                 </div>
-                <div></div>
             </div>
         </section>
     );
