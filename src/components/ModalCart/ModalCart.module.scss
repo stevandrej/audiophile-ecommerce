@@ -2,10 +2,21 @@
     margin-bottom: 30px;
 }
 
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    z-index: -1;
+}
+
 .modalContainer {
     position: absolute;
     right: 0;
     top: 80%;
+    z-index: 1000;
     background-color: white;
     padding: 30px;
     border-radius: 8px;

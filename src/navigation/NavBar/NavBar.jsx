@@ -18,7 +18,7 @@ const NavBar = () => {
 				<Menu />
 			</nav>
 			<img src={cartIcon} alt='cart' className={styles.cart} onClick={()=>setModalOpen(!modalOpen)}/>
-			{ modalOpen && <ModalCart />}
+			{ modalOpen && <ModalCart open={setModalOpen}/>}
 		</div>
 	</div>
 }
