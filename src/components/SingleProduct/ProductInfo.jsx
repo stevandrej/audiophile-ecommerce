@@ -90,7 +90,7 @@ const ProductInfo = ({ newProduct = true, ...props }) => {
                                     <span
                                         className={`sub-title ${styles.boxList}`}
                                     >
-                                        {item.quantity}
+                                        {item.quantity}x
                                     </span>{" "}
                                     {item.item}
                                 </li>
