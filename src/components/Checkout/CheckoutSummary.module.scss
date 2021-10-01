@@ -1,14 +1,61 @@
 @import '../../assets/scss/variables';
 
+@mixin space-between-elements {
+    margin-bottom: 30px;
+}
+
 .summaryForm{
 	display: flex;
 	flex-direction: column;
 	flex: 1;
 }
 
+.summaryHeading{
+	@include space-between-elements;
+}
+
+//ITEM IN LIST
+.item {
+    display: flex;
+    flex: 1;
+
+	@include space-between-elements;
+}
+
+.itemLeftSide {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.itemImage {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+    align-self: center;
+}
+
+.itemInfo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemQuantity {
+    display: flex;
+    align-self: center;
+	justify-content: flex-end;
+    flex: 1;
+	color: #808080;
+}
+//End of ITEM
+
 .rowPayInfo{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 12px;
 }
 
 .info{
@@ -21,4 +68,8 @@
 
 .totalPrice{
 	color: $primary;
+}
+
+.payBtn{
+    margin-top: 20px;
 }

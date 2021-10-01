@@ -1,9 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import CheckoutForm from "../../components/Checkout/CheckoutForm";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary";
 import styles from './Checkout.module.scss';
 
 const Checkout = () => {
+
+    const cart = useSelector(state => state.cartReducer.cart);
+
     return (
 		<div className={styles.componentBackground}>
         <div className={`wrapper ${styles.contentWrapper}`}>
@@ -12,7 +16,7 @@ const Checkout = () => {
                     <CheckoutForm />
                 </div>
                 <div className={styles.summary}>
-                    <CheckoutSummary />
+                    <CheckoutSummary cart={cart}/>
                 </div>
             </div>
         </div>
