@@ -5,26 +5,41 @@ import InputNumber from "../Input/InputNumber/InputNumber";
 import { useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/cart";
+import ModalNotification from "../ModalNotification/ModalNotification";
 
 const ProductInfo = ({ newProduct = true, ...props }) => {
     let history = useHistory();
     const dispatch = useDispatch();
 
     const [quantity, setQuantity] = useState(1);
+    const [modalNotification, setModalNotification] = useState(false);
 
     const handleBtnClick = (item) => {
         dispatch(addToCart(item));
+
+        setModalNotification(true);
+
+        setTimeout(() => {
+            setModalNotification(false);
+        }, 5000);
     };
 
     if (props.product != null)
         return (
             <section className={styles.product}>
-                <button
-                    className={styles.btnBack}
-                    onClick={() => history.goBack()}
-                >
-                    Go Back
-                </button>
+                <div style={{ display: "flex", flex: "1" }}>
+                    <button
+                        className={styles.btnBack}
+                        onClick={() => history.goBack()}
+                    >
+                        Go Back
+                    </button>
+                    {modalNotification && (
+                        <ModalNotification>
+                            Product added to cart!
+                        </ModalNotification>
+                    )}
+                </div>
                 <div className={styles["product-container"]}>
                     <div className={styles["product-image"]}>
                         {props.product.image.desktop !== undefined ? (

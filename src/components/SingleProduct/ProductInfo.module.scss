@@ -11,6 +11,9 @@
 	border: none;
 	cursor: pointer;
 	color: $secondary;
+	margin-right: 100px;
+	height: fit-content;
+	align-self: center;
 	
 	&:hover{
 		color: $primary;
